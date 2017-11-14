@@ -1,7 +1,9 @@
-<?php
+<?php namespace Meminuygur\Poker;
 
-
-namespace Meminuygur\Poker;
+/**
+ * Interface Shuffler
+ * @package Meminuygur\Poker
+ */
 
 interface Shuffler
 {

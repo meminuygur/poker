@@ -1,8 +1,9 @@
-<?php
+<?php namespace Meminuygur\Poker;
 
-
-namespace Meminuygur\Poker;
-
+/**
+ * Interface ModelInterface
+ * @package Meminuygur\Poker
+ */
 
 interface ModelInterface
 {

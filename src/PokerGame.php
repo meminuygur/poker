@@ -1,21 +1,31 @@
-<?php
-
-
-namespace Meminuygur\Poker;
+<?php namespace Meminuygur\Poker;
 
 use Meminuygur\Poker\PlayerModel as PlayerModel;
+
+/**
+ * Class PokerGame
+ * @package Meminuygur\Poker
+ */
 
 class PokerGame
 {
     public $player_model;
     public static $cards;
 
+
+    /**
+     * PokerGame constructor.
+     */
     public function __construct()
     {
         $this->player_model = new PlayerModel();
     }
 
 
+    /**
+     * @param $cards
+     * @param $selectedValue
+     */
     public function start($cards, $selectedValue) {
 
         $this->player_model->setCardDeck($cards);
@@ -25,17 +35,24 @@ class PokerGame
 
     }
 
+    /**
+     * Draft a card from card deck.
+     * return @boolean
+     */
     public function play(){
 
         $card = $this->player_model->draftCard();
         $this->countValidCards();
 
-        if ($card['value'] == $this->player_model->getSelectedValue() ) {
-            echo "ok ";
-        }
+        return ($card['value'] == $this->player_model->getSelectedValue());
 
     }
 
+
+    /**
+     * Calculates and returns chance of getting desired card
+     * @return string
+     */
     public function getChance() {
 
         return  number_format(
@@ -44,6 +61,10 @@ class PokerGame
             . "%";
     }
 
+    /**
+     * Generates main card array
+     * @return array
+     */
     public static function createCards() {
 
         $suits = array(
@@ -87,6 +108,9 @@ class PokerGame
 
     }
 
+    /**
+     * Checks and counts for suitable card values.
+     */
     private function countValidCards(){
 
         $this->player_model->setValidCardCount(0);
