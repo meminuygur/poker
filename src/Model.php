@@ -1,8 +1,7 @@
 <?php
 
-namespace Meminuygur\Poker\Model;
+namespace Meminuygur\Poker;
 
-use \Meminuygur\Poker\ModelInterface;
 
 class Model implements ModelInterface
 {

@@ -10,8 +10,14 @@
 */
 class PokerGameTest extends PHPUnit_Framework_TestCase{
 
+  public function __construct()
+  {
+      parent::__construct();
+      session_start();
 
-  public function testIsChanceValid(){
+  }
+
+    public function testIsChanceValid(){
 
       $cards = Meminuygur\Poker\PokerGame::createCards();
 
