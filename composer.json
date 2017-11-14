@@ -1,0 +1,24 @@
+{
+    "name": "meminuygur/poker",
+    "description": "Poker",
+    "keywords": ["composer", "package"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "M.Emin Uygur",
+            "email": "meminuygur@yandex.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Meminuygur\\Poker\\": "src/"
+        }
+    }
+}
