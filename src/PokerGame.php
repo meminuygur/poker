@@ -26,10 +26,11 @@ class PokerGame
      * @param $cards
      * @param $selectedValue
      */
-    public function start($cards, $selectedValue) {
+    public function start($cards, $selectedValue,$selectedSuit) {
 
         $this->player_model->setCardDeck($cards);
         $this->player_model->setSelectedValue($selectedValue);
+        $this->player_model->setSelectedSuit($selectedSuit);
 
         $this->countValidCards();
 

@@ -13,6 +13,7 @@ class PlayerModel extends Model
     public $cards;
     public $selectedValue;
     public $validCardCount;
+    public $selectedSuit;
 
 
     /**
@@ -44,6 +45,25 @@ class PlayerModel extends Model
      */
     public function getSelectedValue(){
         return $this->get('selectedValue');
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getSelectedSuit()
+    {
+        return $this->get('selectedSuit');
+    }
+
+
+    /**
+     * @param mixed $selectedSuit
+     */
+    public function setSelectedSuit($value)
+    {
+        $this->set('selectedSuit', $value);
+        $this->selectedSuit = $this->get('selectedSuit');
     }
 
 
